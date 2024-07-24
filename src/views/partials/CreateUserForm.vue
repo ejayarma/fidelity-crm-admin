@@ -1,6 +1,7 @@
 <script setup>
 import InputText from 'primevue/inputtext';
 import Dropdown from 'primevue/dropdown';
+import Button from 'primevue/button';
 import { reactive, ref } from 'vue';
 
 
@@ -18,7 +19,7 @@ const userForm = reactive({
 </script>
 
 <template>
-    <div class="border p-6 rounded space-y-4">
+    <form class="p-6 space-y-4 border rounded">
         <div class="flex flex-col gap-2">
             <label class="font-semibold" for="username">Username</label>
             <InputText class="!bg-primary-50" v-model="userForm.username" id="username" type="text"
@@ -39,5 +40,8 @@ const userForm = reactive({
             <Dropdown class="!bg-primary-50" v-model="userForm.branch" id="branch" aria-labelledby="branch"
                 :options="branches" />
         </div>
-    </div>
+        <div class="flex justify-end">
+            <Button type="submit" raised label="Submit" size="small" icon="pi pi-arrow-right" icon-pos="right" />
+        </div>
+    </form>
 </template>

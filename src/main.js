@@ -15,6 +15,7 @@ import 'primeicons/primeicons.css';
 import App from './App.vue'
 import router from './router'
 import Lara from '@/presets/lara';      //import preset        
+import Aura from '@/presets/aura';      //import preset        
 
 const app = createApp(App)
 

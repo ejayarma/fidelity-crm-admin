@@ -40,6 +40,11 @@ import Header from '@/components/Header.vue';
           <i class="pi pi-clipboard"></i>
           <span>Reports</span>
         </RouterLink>
+        <RouterLink class="flex items-center gap-3 px-3 py-2 transition duration-300 rounded hover:bg-surface-500"
+          to="#">
+          <i class="pi pi-sign-out"></i>
+          <span>Logout</span>
+        </RouterLink>
       </div>
 
     </aside>

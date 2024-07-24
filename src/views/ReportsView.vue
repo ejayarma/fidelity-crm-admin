@@ -74,7 +74,7 @@ function generateSeverity(status = 'info') {
         </div>
         <Card class="mt-5 shadow-xl border-[.5px] p-1">
             <template #title>
-                <div class="flex flex-col gap-4 text-xs font-normal xl:justify-stretch xl:gap-2 xl:flex-row">
+                <div class="flex flex-col gap-4 text-xs font-normal xl:justify-between xl:gap-2 xl:flex-row">
                     <div class="inline-flex flex-col justify-between gap-2 sm:flex-row ">
                         <Dropdown v-model="selectedBranch" :options="branches" placeholder="Select Branch"
                             class="w-full h-10 p-0 m-0 !rounded-full" />
@@ -84,7 +84,7 @@ function generateSeverity(status = 'info') {
                             class="w-full h-10 p-0 m-0 !rounded-full" />
                     </div>
 
-                    <div class="flex flex-col border rounded-md sm:flex-row">
+                    <div class="flex flex-col justify-between border rounded-md sm:flex-row">
                         <div class="inline-flex items-baseline w-full p-1">
                             <span class="w-8 mr-1 font-semibold">From</span>
                             <Calendar class="w-full h-10" date-format="d M. yy" :manual-input="false" v-model="fromDate"
@@ -95,8 +95,10 @@ function generateSeverity(status = 'info') {
                             <Calendar class="w-full h-10" date-format="d M. yy" :manual-input="false" v-model="toDate"
                                 show-button-bar="" show-icon iconDisplay="input" />
                         </div>
-                        <Button class="!py-2 ml-0 mt-4 sm:mt-0 sm:ml-1 w-full" raised label="Search Range"
-                            severity="contrast" size="small" icon="pi pi-search" icon-pos="right" />
+                        <div class="inline-flex items-center justify-end w-full pb-1 pr-1 sm:pb-0">
+                            <Button class="!py-2 ml-0 mt-4 sm:mt-0 sm:ml-1" raised label="" severity="contrast"
+                                size="small" icon="pi pi-search" icon-pos="right" />
+                        </div>
                     </div>
                 </div>
 

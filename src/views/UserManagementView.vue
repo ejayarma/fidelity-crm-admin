@@ -10,6 +10,16 @@ import { useDialog } from 'primevue/usedialog';
 
 const dialog = useDialog();
 
+const modalStyles = {
+    width: '80vw',
+};
+const modalBreakPoints = {
+    '575px': '85vw',
+    '640px': '80vw',
+    '960px': '65vw',
+    '1199px': '65vw',
+};
+
 const users = ref(
     Array(100).fill({
         name: 'Joseph Quansah',
@@ -34,6 +44,8 @@ const items = ref([
                         header: 'Edit User',
                         draggable: false,
                         modal: true,
+                        style: modalStyles,
+                        breakpoints: modalBreakPoints,
                     }
                 }),
             },
@@ -55,15 +67,8 @@ function showCreateUserForm() {
             header: 'Create New User',
             draggable: false,
             modal: true,
-            style: {
-                width: '80vw',
-            },
-            breakpoints:{
-                '575px': '85vw',
-                '640px': '80vw',
-                '960px': '65vw',
-                '1199px': '65vw',
-            },
+            style: modalStyles,
+            breakpoints: modalBreakPoints,
         }
     });
 }
@@ -76,8 +81,7 @@ function showCreateUserForm() {
             <h1 class="text-xl font-bold">User Management</h1>
             <div class="w-full p-1 pl-3 bg-white border-2 rounded-full sm:w-1/3 border-secondary/50">
                 <div class="flex justify-between">
-                    <input
-                        class="w-full font-light input placeholder:font-thin placeholder:text-sm focus:outline-none "
+                    <input class="w-full font-light input placeholder:font-thin placeholder:text-sm focus:outline-none "
                         placeholder="Search Users..." type="text">
                     <span class="px-4 py-1 text-white rounded-full bg-primary">
                         <i class="pi pi-search"></i>

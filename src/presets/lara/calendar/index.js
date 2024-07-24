@@ -276,7 +276,8 @@ export default {
     day: {
         class: [
             // Spacing
-            'p-0 md:p-2'
+            // 'p-0 md:p-2'
+            'p-0 md:p-.75'
         ]
     },
     weeklabelcontainer: ({ context }) => ({
@@ -588,7 +589,8 @@ export default {
                 'inline-flex items-center justify-center',
 
                 // Spacing
-                'px-4 py-3 leading-none',
+                // 'px-4 py-3 leading-none',
+                'px-4 py-2 leading-none',
 
                 // Shape
                 'rounded-md',
@@ -616,7 +618,8 @@ export default {
                 'inline-flex items-center justify-center',
 
                 // Spacing
-                'px-4 py-3 leading-none',
+                // 'px-4 py-3 leading-none',
+                'px-4 py-2 leading-none',
 
                 // Shape
                 'rounded-md',
